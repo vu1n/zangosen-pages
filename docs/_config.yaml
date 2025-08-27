@@ -1,27 +1,16 @@
 title: Hacker News Digest
 description: Daily AI-generated summaries of top HN stories
+url: "https://vu1n.github.io"
+baseurl: "/zangosen-pages"
 
-# Project site settings:
-url: https://vu1n.github.io      # ← absolute, no trailing slash
-baseurl: ""                  # ← leading slash, no trailing slash
-
-# Use a GitHub Pages theme via remote_theme (remove 'theme:' if present)
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
 
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: false
 
-# Ensure pages render with the theme's default layout
 defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
+  - scope: { path: "", type: "pages" }
+    values: { layout: default }
