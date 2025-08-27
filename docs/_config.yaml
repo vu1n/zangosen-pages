@@ -2,36 +2,36 @@
 title: "Hacker News Digest"
 description: "Daily AI-generated summaries of top HN stories"
 
-# Project site settings (for vu1n/zangosen-pages)
-url: "https://vu1n.github.io"     # absolute, quoted; no trailing slash
-baseurl: "/zangosen-pages"        # leading slash; "" only if repo is vu1n.github.io
+# Project site settings (repo: vu1n/zangosen-pages)
+url: "https://vu1n.github.io"        # absolute, quoted; no trailing slash
+baseurl: "/zangosen-pages"           # leading slash; "" only if repo is vu1n.github.io
 
 # Use ONE theme directive only:
-remote_theme: just-the-docs/just-the-docs@v0.6.3
+remote_theme: just-the-docs/just-the-docs@v0.10.1   # or: just-the-docs/just-the-docs
+
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Markdown engine
 markdown: kramdown
 kramdown:
   input: GFM
 
-# Just the Docs settings
+# Just the Docs search
 search_enabled: true
 search:
-  button: true           # show a search box button in the header
+  button: true
   rel_url: true
   previews: 3
   tokenizer_separator: /[\s/]+/
 
-# Optional links in the header
+# Optional header link
 aux_links:
   "GitHub Repo":
     - "https://github.com/vu1n/zangosen-pages"
 
-# Make pages use a layout automatically
+# Apply the theme's default layout to pages without front matter
 defaults:
   - scope:
       path: ""
