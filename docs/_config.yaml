@@ -1,16 +1,20 @@
+# docs/_config.yml
 title: Hacker News Digest
 description: Daily AI-generated summaries of top HN stories
-url: "https://vu1n.github.io"
-baseurl: "/zangosen-pages"
+url: https://<owner>.github.io
+baseurl: /<repo>        # "" for user/org site repos
 
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: just-the-docs/just-the-docs@v0.6.3
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-markdown: kramdown
-kramdown:
-  input: GFM
-
-defaults:
-  - scope: { path: "", type: "pages" }
-    values: { layout: default }
+# Just-the-Docs options
+search_enabled: true
+color_scheme: light   # or "dark"
+aux_links:
+  GitHub Repo: https://github.com/<owner>/<repo>
+nav_external_links:
+  - title: Latest Digest
+    url: {{ site.baseurl }}/hn-digest-{{ site.time | date: "%Y-%m-%d" }}.html
