@@ -1,20 +1,40 @@
 # docs/_config.yml
-title: Hacker News Digest
-description: Daily AI-generated summaries of top HN stories
-url: https://vu1n.github.io
-baseurl: /zangosen-pages       # "" for user/org site repos
+title: "Hacker News Digest"
+description: "Daily AI-generated summaries of top HN stories"
 
+# Project site settings (for vu1n/zangosen-pages)
+url: "https://vu1n.github.io"     # absolute, quoted; no trailing slash
+baseurl: "/zangosen-pages"        # leading slash; "" only if repo is vu1n.github.io
+
+# Use ONE theme directive only:
 remote_theme: just-the-docs/just-the-docs@v0.6.3
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Just-the-Docs options
+# Markdown engine
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Just the Docs settings
 search_enabled: true
-color_scheme: light   # or "dark"
+search:
+  button: true           # show a search box button in the header
+  rel_url: true
+  previews: 3
+  tokenizer_separator: /[\s/]+/
+
+# Optional links in the header
 aux_links:
-  GitHub Repo: https://github.com/vu1n/zangosen-pages
-nav_external_links:
-  - title: Latest Digest
-    url: {{ site.baseurl }}/hn/stories/{{ site.time | date: "%Y%mm%dd" }}.html
+  "GitHub Repo":
+    - "https://github.com/vu1n/zangosen-pages"
+
+# Make pages use a layout automatically
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
