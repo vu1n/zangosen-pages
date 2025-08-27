@@ -1,0 +1,31 @@
+# docs/_config.yml
+title: Hacker News Digest
+description: Daily AI-generated summaries of top HN stories
+# For project sites (most repos), set both url + baseurl:
+url: https://vu1n.github.io
+baseurl:         # leave empty "" if your repo is <owner>.github.io
+# Use a Pages-supported remote theme
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true
+
+# Make all Markdown pages use the default layout from the theme
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+# Theme knobs (supported by pages-themes)
+show_downloads: false
