@@ -2,7 +2,7 @@ title: Hacker News Digest
 description: Daily AI-generated summaries of top HN stories
 
 # Project site settings:
-url: https://<owner>.github.io      # ← absolute, no trailing slash
+url: https://vu1n.github.io      # ← absolute, no trailing slash
 baseurl: ""                  # ← leading slash, no trailing slash
 
 # Use a GitHub Pages theme via remote_theme (remove 'theme:' if present)
