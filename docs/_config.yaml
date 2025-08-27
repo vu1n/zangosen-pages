@@ -1,8 +1,8 @@
 # docs/_config.yml
 title: Hacker News Digest
 description: Daily AI-generated summaries of top HN stories
-url: https://<owner>.github.io
-baseurl: /<repo>        # "" for user/org site repos
+url: https://vu1n.github.io
+baseurl: /zangosen-pages       # "" for user/org site repos
 
 remote_theme: just-the-docs/just-the-docs@v0.6.3
 plugins:
@@ -14,7 +14,7 @@ plugins:
 search_enabled: true
 color_scheme: light   # or "dark"
 aux_links:
-  GitHub Repo: https://github.com/<owner>/<repo>
+  GitHub Repo: https://github.com/vu1n/zangosen-pages
 nav_external_links:
   - title: Latest Digest
-    url: {{ site.baseurl }}/hn-digest-{{ site.time | date: "%Y-%m-%d" }}.html
+    url: {{ site.baseurl }}/hn/stories/{{ site.time | date: "%Y%mm%dd" }}.html
